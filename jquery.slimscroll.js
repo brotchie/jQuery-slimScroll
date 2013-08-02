@@ -347,11 +347,6 @@
           // fire scrolling event
           me.trigger('slimscrolling', ~~delta);
 
-          // ensure bar is visible
-          showBar();
-
-          // trigger hide when scroll is stopped
-          hideBar();
         }
 
         function attachWheel()
@@ -372,10 +367,6 @@
           // calculate scrollbar height and make sure it is not too small
           barHeight = Math.max((me.outerHeight() / me[0].scrollHeight) * me.outerHeight(), minBarHeight);
           bar.css({ height: barHeight + 'px' });
-
-          // hide scrollbar if content is not long enough
-          var display = barHeight == me.outerHeight() ? 'none' : 'block';
-          bar.css({ display: display });
         }
 
         function showBar()
