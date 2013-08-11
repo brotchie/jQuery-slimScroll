@@ -304,6 +304,7 @@
           // stop window scroll
           if (e.preventDefault && !releaseScroll) { e.preventDefault(); }
           if (!releaseScroll) { e.returnValue = false; }
+          showBar();
         }
 
         function scrollContent(y, isWheel, isJump)
